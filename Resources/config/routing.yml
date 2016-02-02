@@ -1,0 +1,11 @@
+sym16_simple_stock_homepage:
+    path:     /
+    defaults: { _controller: SYM16SimpleStockBundle:Default:index }
+
+sym16_simple_stock_ilike:
+    path: /iLike/{verbe}
+    defaults: { _controller: SYM16SimpleStockBundle:RAMIPremierControleur:iLike}
+
+sym16_simple_stock_produit:
+    path: /produit/{chiffre1}/{chiffre2}
+    defaults: { _controller: SYM16SimpleStockBundle:RAMIPremierControleur:produit}
