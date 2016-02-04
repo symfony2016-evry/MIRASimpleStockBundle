@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<style>
+			table, td, tr{
+				border: 1px solid purple;
+				border-collapse: collapse;
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<thead>
+			<tr>
+				{% for Colnames in listColnames %}
+					<th> {{ Colnames }} </th>
+				{% endfor %}
+					<th>Modifier</th>
+					<th>Supprimer</th>
+			</tr>
+			</thead>
+			<tbody>
+			 {% for ligne in listEntities %}
+			 	<tr>
+			 		{% for cellule in ligne %}
+			 			<td> {{ cellule }} </td>
+			 		{% endfor %}
+			 			<td><a href="{{ path('sym16_simple_stock_modifier') }}">Modifier</a></td>
+			 			<td><a href="{{ path('sym16_simple_stock_supprimer') }}">Supprimer</a></td>
+
+			 	</tr>
+			 {% endfor %}
+			 </tbody>
+
+		</table>
+	</body>
+</html>

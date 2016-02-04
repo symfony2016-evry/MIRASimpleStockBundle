@@ -1,5 +1,5 @@
 sym16_simple_stock_homepage:
-    path:     /
+    path:     /home/{name}
     defaults: { _controller: SYM16SimpleStockBundle:Default:index }
 
 sym16_simple_stock_ilike:
@@ -9,3 +9,20 @@ sym16_simple_stock_ilike:
 sym16_simple_stock_produit:
     path: /produit/{chiffre1}/{chiffre2}
     defaults: { _controller: SYM16SimpleStockBundle:RAMIPremierControleur:produit}
+
+
+sym16_simple_stock_racine:
+    path: /racine/{valeur}/{radical}
+    defaults: { _controller: SYM16SimpleStockBundle:RAMIPremierControleur:racine}
+
+sym16_simple_stock_lister:
+    path: /lister
+    defaults: { _controller: SYM16SimpleStockBundle:RAMIPremierControleur:lister}
+
+sym16_simple_stock_supprimer:
+    path: /supprimer
+    defaults: { _controller: SYM16SimpleStockBundle:RAMIPremierControleur:supprimer}
+
+sym16_simple_stock_modifier:
+    path: /modifier
+    defaults: { _controller: SYM16SimpleStockBundle:RAMIPremierControleur:modifier}
